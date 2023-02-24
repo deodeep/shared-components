@@ -1,0 +1,24 @@
+{
+    "name": "code",
+    "version": "1.0.0",
+    "description": "A component library for getting people started with easy to re-use components for everyday projects.",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "del /S /Q dist/ & prettier --write src/ & npm run build:esm & npm run build:cjs",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@types/react": "^18.0.28",
+        "@types/react-native": "^0.71.3",
+        "react": "^18.2.0",
+        "react-native": "^0.71.3",
+        "typescript": "^4.9.5"
+    }
+}
